@@ -15,19 +15,19 @@ function setup () {
   columnWidth = windowWidth / 215
   var cnv = createCanvas(windowWidth, windowHeight)
   cnv.parent('background')
-
+  frameRate(60)
   backgroundCol = color(255, 255, 255)
   columnCount = windowWidth / columnWidth
   for (let i = 0; i < columnCount; i++) {
     lines[i] = []
   }
-  GetNewHeights(0.005)
 }
 
 function draw () {
   background(color(255, 255, 255))
   GetNewHeights(0.005)
-  console.log(frameRate())
+  delta = mouseY / 300
+  prevMouseX = mouseX
   for (let i = 0; i < columnCount; i++) {
     var height = GetHeight(i)
 
@@ -35,9 +35,9 @@ function draw () {
     RemoveLine(i, height)
 
     for (let j = 0; j < lines[i].length; j++) {
-      var x1 = lines[i][j][0]
+      var x1 = lines[i][j][0] + delta
       var y1 = lines[i][j][1]
-      var x2 = lines[i][j][2]
+      var x2 = lines[i][j][2] - delta
       var y2 = lines[i][j][3]
       line(x1, y1, x2, y2)
     }
@@ -70,7 +70,7 @@ function AddLine (columnIndex, height) {
 }
 
 function RemoveLine (columnIndex) {
-  if (lines[columnIndex].length > 50) {
+  if (lines[columnIndex].length > 40) {
     lines[columnIndex].shift()
   }
 }
