@@ -11,9 +11,9 @@ var lines = []
 var delta
 p5.disableFriendlyErrors = true
 
-function setup () {
+function setup() {
   columnWidth = windowWidth / 215
-  var cnv = createCanvas(windowWidth, windowHeight)
+  var cnv = createCanvas(windowWidth, windowHeight / 2)
   cnv.parent('background')
   frameRate(60)
   backgroundCol = color(255, 255, 255)
@@ -23,7 +23,7 @@ function setup () {
   }
 }
 
-function draw () {
+function draw() {
   background(color(255, 255, 255))
   GetNewHeights(0.005)
   delta = mouseY / 300
@@ -44,8 +44,8 @@ function draw () {
   }
 }
 
-function GetHeight (i) {
-  return heights[i] + windowHeight * 50 / 100
+function GetHeight(i) {
+  return heights[i] + windowHeight / 6
 }
 
 // function mouseWheel (event) {
@@ -58,7 +58,7 @@ function GetHeight (i) {
 //   }
 // }
 
-function AddLine (columnIndex, height) {
+function AddLine(columnIndex, height) {
   var newLine = [
     windowWidth / columnCount * columnIndex,
     height,
@@ -69,13 +69,13 @@ function AddLine (columnIndex, height) {
   lines[columnIndex].push(newLine)
 }
 
-function RemoveLine (columnIndex) {
+function RemoveLine(columnIndex) {
   if (lines[columnIndex].length > 40) {
     lines[columnIndex].shift()
   }
 }
 
-function GetNewHeights (ni) {
+function GetNewHeights(ni) {
   heights = []
   noiseIndex += ni
   for (let i = 0; i < columnCount; i++) {
@@ -83,6 +83,6 @@ function GetNewHeights (ni) {
   }
 }
 
-function windowResized () {
-  resizeCanvas(windowWidth, windowHeight)
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight / 2)
 }
