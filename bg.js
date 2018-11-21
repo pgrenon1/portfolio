@@ -9,7 +9,7 @@ var prevMouseX
 var prevMouseY
 var lines = []
 var delta
-p5.disableFriendlyErrors = true
+//p5.disableFriendlyErrors = true
 
 function setup() {
   columnWidth = windowWidth / 215
@@ -21,12 +21,13 @@ function setup() {
   for (let i = 0; i < columnCount; i++) {
     lines[i] = []
   }
+  fill(0)
 }
 
 function draw() {
   background(color(255, 255, 255))
   GetNewHeights(0.005)
-  delta = mouseY / 300
+  delta = mouseY / 100
   prevMouseX = mouseX
   for (let i = 0; i < columnCount; i++) {
     var height = GetHeight(i)
@@ -45,18 +46,8 @@ function draw() {
 }
 
 function GetHeight(i) {
-  return heights[i] + windowHeight / 6
+  return heights[i]
 }
-
-// function mouseWheel (event) {
-//   GetNewHeights(0.005)
-//   for (let i = 0; i < columnCount; i++) {
-//     var height = GetHeight(i)
-
-//     AddLine(i, height)
-//     RemoveLine(i, height)
-//   }
-// }
 
 function AddLine(columnIndex, height) {
   var newLine = [
@@ -70,7 +61,7 @@ function AddLine(columnIndex, height) {
 }
 
 function RemoveLine(columnIndex) {
-  if (lines[columnIndex].length > 40) {
+  if (lines[columnIndex].length > 20) {
     lines[columnIndex].shift()
   }
 }
@@ -79,7 +70,7 @@ function GetNewHeights(ni) {
   heights = []
   noiseIndex += ni
   for (let i = 0; i < columnCount; i++) {
-    heights.push(noise(i + noiseIndex) * 500)
+    heights.push(noise(i + noiseIndex) * 1000)
   }
 }
 
