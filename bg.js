@@ -1,7 +1,6 @@
 var triangles
 var state
 const states = [0, 1]
-const width = 7
 var columnCount
 var heights = []
 var noiseIndex = 0
@@ -9,14 +8,16 @@ var backgroundCol
 var prevMouseX
 var prevMouseY
 var lines = []
+var delta
+p5.disableFriendlyErrors = true
 
 function setup () {
+  columnWidth = windowWidth / 215
   var cnv = createCanvas(windowWidth, windowHeight)
   cnv.parent('background')
 
   backgroundCol = color(255, 255, 255)
-  stroke(0)
-  columnCount = windowWidth / width
+  columnCount = windowWidth / columnWidth
   for (let i = 0; i < columnCount; i++) {
     lines[i] = []
   }
@@ -24,11 +25,11 @@ function setup () {
 }
 
 function draw () {
-  console.log(frameRate())
   background(color(255, 255, 255))
   GetNewHeights(0.005)
+  console.log(frameRate())
   for (let i = 0; i < columnCount; i++) {
-    var height = heights[i] + windowHeight * 50 / 100
+    var height = GetHeight(i)
 
     AddLine(i, height)
     RemoveLine(i, height)
@@ -43,15 +44,19 @@ function draw () {
   }
 }
 
-function mouseWheel (event) {
-  GetNewHeights(0.005)
-  for (let i = 0; i < columnCount; i++) {
-    var height = heights[i] + windowHeight * 50 / 100
-
-    AddLine(i, height)
-    RemoveLine(i, height)
-  }
+function GetHeight (i) {
+  return heights[i] + windowHeight * 50 / 100
 }
+
+// function mouseWheel (event) {
+//   GetNewHeights(0.005)
+//   for (let i = 0; i < columnCount; i++) {
+//     var height = GetHeight(i)
+
+//     AddLine(i, height)
+//     RemoveLine(i, height)
+//   }
+// }
 
 function AddLine (columnIndex, height) {
   var newLine = [
@@ -60,7 +65,7 @@ function AddLine (columnIndex, height) {
     windowWidth / columnCount * columnIndex + windowWidth / columnCount,
     height
   ]
-
+  stroke(0)
   lines[columnIndex].push(newLine)
 }
 
@@ -74,6 +79,10 @@ function GetNewHeights (ni) {
   heights = []
   noiseIndex += ni
   for (let i = 0; i < columnCount; i++) {
-    heights.push(noise(i + noiseIndex) * 800)
+    heights.push(noise(i + noiseIndex) * 500)
   }
+}
+
+function windowResized () {
+  resizeCanvas(windowWidth, windowHeight)
 }
