@@ -9,26 +9,31 @@
 
     <script src="assets/js/lib/p5.min.js"></script>
     <script src="assets/js/lib/addons/p5.dom.js"></script>
-    <script src="assets/js/bg.js"></script>
+    <script src="assets/js/lib/barba.min.js"></script>
+		<script src="assets/js/bg.js"></script>
+		<script src="assets/js/app.js"></script> <!-- our new ajax script -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div id="background"></div>
-    <div class="foreground">
-        <div class="flex">
-            <div class="menu">
-                <div class="name"><a href="index.html">Phil<br>Grenon</a></div>
-                <div class="menu-content">
-                    <div class="menu-item">_games</div>
-                    <div class="menu-item">_me</div>
-                </div>
-            </div>
-            <div class="content">
-
-            </div>
-        </div>
-    </div>
+	<div id="background"></div>
+	<div class="foreground">
+		<div class="flex">
+			<div class="menu">
+				<div class="name"><a href="index.html">Phil<br>Grenon</a></div>
+				<div class="menu-content">
+					<a href="games.html" data-href="games.html" class="menu-item">_games</a>
+					<!-- added hooks for js to load in content -->
+					<div class="menu-item">_me</div>
+				</div>
+			</div>
+			<div class="barba-wrapper">
+				<div id="barba-container">
+					<p>Home content</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

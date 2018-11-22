@@ -1,6 +1,6 @@
 @font-face {
 	font-family: monofur;
-	src: url(./media/monof55.ttf)
+	src: url(../fonts/monof55.ttf)
 }
 
 body {
@@ -67,6 +67,6 @@ a {
 	margin-left: 1%;
 }
 
-.content {
+.content, #barba-wrapper {
 	flex-basis: 77%;
 }
