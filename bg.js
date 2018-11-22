@@ -10,6 +10,7 @@ var prevMouseY
 var lines = []
 var delta
 p5.disableFriendlyErrors = true
+p5.sketchFullscreen = true
 
 function setup () {
   columnWidth = windowWidth / 215
