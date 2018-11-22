@@ -39,7 +39,7 @@ function draw () {
       var y1 = lines[i][j][1]
       var x2 = lines[i][j][2] - delta
       var y2 = lines[i][j][3]
-      line(x1, y1, x2, y2)
+      line(x1 - mouseX / 70, y1, x2 - mouseX / 70, y2)
     }
   }
 }
