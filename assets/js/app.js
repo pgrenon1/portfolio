@@ -13,7 +13,7 @@
 				e.preventDefault(); // stop browser from navigating to the page with a refresh
 				// AJAX MAGIC HERE
 				const destination = link.getAttribute('data-href');
-
+				console.log(destination);
 			})
 		});
 	});
