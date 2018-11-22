@@ -1,0 +1,19 @@
+{
+  "name": "pgrenonportfolio",
+  "version": "1.0.0",
+  "description": "Philippe Grenon's Portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgrenon1/portfolio.git"
+  },
+  "author": "Philippe Grenon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pgrenon1/portfolio/issues"
+  },
+  "homepage": "https://github.com/pgrenon1/portfolio#readme"
+}
