@@ -70,3 +70,15 @@ a {
 .content, #barba-wrapper {
 	flex-basis: 77%;
 }
+
+@media screen and (max-width: 400px) {
+	/* These rules apply to screens smaller than 400px (mobile) */
+
+	.menu {
+		flex-basis: 100%;
+	}
+
+	.name {
+		font-size: 30px;
+	}
+}
