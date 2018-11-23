@@ -2,34 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Phil Grenon</title>
+	<title>Phil Grenon</title>
 
-    <script src="assets/js/lib/p5.min.js"></script>
-    <script src="assets/js/lib/addons/p5.dom.js"></script>
-    <script src="assets/js/lib/barba.min.js"></script>
-		<script src="assets/js/bg.js"></script>
-		<script src="assets/js/app.js"></script> <!-- our new ajax script -->
-    <link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/lib/p5.min.js"></script>
+	<script src="assets/js/lib/addons/p5.dom.js"></script>
+	<script src="assets/js/lib/barba.min.js"></script>
+	<script src="assets/js/bg.js"></script>
+	<script src="assets/js/app.js"></script> <!-- our new ajax script -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- <script src="assets/js/menugizmo.js"></script> -->
 </head>
 
 <body>
 	<div id="background"></div>
 	<div class="foreground">
-		<div class="flex">
-			<div class="menu">
-				<div class="name"><a href="index.html">Phil<br>Grenon</a></div>
-				<div class="menu-content">
-					<a href="games.html" data-href="games.html" class="menu-item">_games</a>
-					<!-- added hooks for js to load in content -->
-					<div class="menu-item">_me</div>
-				</div>
-			</div>
-			<div id="barba-wrapper">
-				<div class="barba-container">
-					<p>Home content</p>
+		<div id="barba-wrapper">
+			<div class="barba-container">
+				<div class="tophalf">
+					<div class="menu">
+						<div id="gizmo"></div>
+						<div class="name"><a href="index.html">Phil<br>Grenon</a></div>
+						<div class="menu-content">
+							<a href="games.html" data-href="games.html" class="menu-item">_games</a>
+							<!-- added hooks for js to load in content -->
+							<a href="me.html" data-href="me.html" class="menu-item">_me</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

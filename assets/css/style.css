@@ -17,9 +17,9 @@ body {
 
 canvas {
 	position: fixed;
+	z-index: -1;
 	bottom: 0;
 	left: 0;
-	z-index: -1;
 }
 
 a {
@@ -27,25 +27,29 @@ a {
 	text-decoration: none;
 }
 
+.tophalf {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
 .menu {
-	/* background-color: rgba(255, 255, 255); */
-	flex-basis: 23%;
+	margin-top: 3%;
 }
 
 .name {
 	margin-top: 0%;
-	font-size: 3vw;
+	font-size: 7vw;
 }
 
 .menu-content {
-	font-size: 2vw;
-	padding-bottom: 50%;
+	font-size: 4vw;
+	display: flex;
+	flex-direction: column;
 }
 
 .menu-item {
-	margin-top: 5%;
 	margin-bottom: 2%;
-	margin-left: 0.5%;
 }
 
 .background {
@@ -56,19 +60,9 @@ a {
 	z-index: 1;
 }
 
-.flex {
-	display: flex;
-	flex-direction: row;
-	justify-content: right;
-}
-
 .title {
 	font-size: 2rem;
 	margin-left: 1%;
-}
-
-.content, #barba-wrapper {
-	flex-basis: 77%;
 }
 
 @media screen and (max-width: 400px) {
