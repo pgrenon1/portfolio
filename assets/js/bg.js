@@ -9,6 +9,7 @@ var prevMouseX
 var prevMouseY
 var lines = []
 var delta
+var fps
 
 p5.disableFriendlyErrors = true
 
@@ -22,7 +23,6 @@ function setup () {
   for (let i = 0; i < columnCount; i++) {
     lines[i] = []
   }
-  fill(0)
 }
 
 function draw () {
@@ -44,6 +44,7 @@ function draw () {
       line(x1 - mouseX / 70, y1, x2 - mouseX / 70, y2)
     }
   }
+  // text(Math.round(frameRate()), 0, 10)
 }
 
 function GetHeight (i) {
