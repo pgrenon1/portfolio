@@ -3,6 +3,10 @@
 	src: url(../fonts/monof55.ttf)
 }
 
+html{
+	height: 100%;
+}
+
 body {
 	display: block;
 	margin: 0;
@@ -13,16 +17,12 @@ body {
 	flex-direction: row; */
 	font-family: monofur;
 	font-size: 2rem;
+	height: 100%;
 }
 
 canvas {
 	position: fixed;
 	z-index: -1;
-}
-
-
-
-#background > canvas{
 	bottom: 0;
 	left: 0;
 }
@@ -32,10 +32,36 @@ a {
 	text-decoration: none;
 }
 
+#barba-wrapper{
+	height:100%;
+}
+
+.barba-container{
+	height: 100%;
+}
+
 .tophalf {
+	height: 50%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+}
+
+.background {
+	position: fixed;
+}
+
+.foreground {
+	height: 100%;
+	z-index: 1;
+}
+
+.tophalf-games{
+	height: 50%;
+	display: flex;
+	align-items: left;
+	flex-direction: row;
+	
 }
 
 .menu {
@@ -43,12 +69,11 @@ a {
 }
 
 .name {
-	margin-top: 0%;
-	font-size: 7vw;
+	font-size: 6vw;
 }
 
 .menu-content {
-	font-size: 4vw;
+	font-size: 3vw;
 	display: flex;
 	flex-direction: column;
 }
@@ -57,17 +82,22 @@ a {
 	margin-bottom: 2%;
 }
 
-.background {
-	position: fixed;
+.content{
+	flex-basis: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.foreground {
-	z-index: 1;
+.content > div{
+	margin: 10px;
+	flex-basis: 20%;
+	background-color: #f1f1f1;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title {
-	font-size: 2rem;
-	margin-left: 1%;
+img{
+	max-width: 100%;
 }
 
 @media screen and (max-width: 400px) {

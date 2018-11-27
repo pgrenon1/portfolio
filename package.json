@@ -18,5 +18,8 @@
   "homepage": "https://github.com/pgrenon1/portfolio#readme",
   "devDependencies": {
     "barba.js": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }
