@@ -23,10 +23,11 @@ function setup () {
   for (let i = 0; i < columnCount; i++) {
     lines[i] = []
   }
+  stroke(0)
 }
 
 function draw () {
-  background(color(255, 255, 255))
+  background(backgroundCol)
   GetNewHeights(0.005)
   delta = mouseY / 100
   prevMouseX = mouseX
@@ -58,7 +59,6 @@ function AddLine (columnIndex, height) {
     windowWidth / columnCount * columnIndex + windowWidth / columnCount,
     height
   ]
-  stroke(0)
   lines[columnIndex].push(newLine)
 }
 

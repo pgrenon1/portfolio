@@ -13,24 +13,35 @@
 	<script src="assets/js/bg.js"></script>
 	<script src="assets/js/app.js"></script> <!-- our new ajax script -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body>
 	<div id="background"></div>
 	<div class="foreground">
-		<div id="barba-wrapper">
-			<div class="barba-container">
-				<div class="tophalf">
-					<div class="menu">
-						<div class="name"><a href="index.html">Phil<br>Grenon</a></div>
-						<div class="menu-content">
-							<a href="games.html" data-href="games.html" class="menu-item">_games</a>
-							<a href="me.html" data-href="me.html" class="menu-item">_me</a>
-						</div>
-					</div>
+		<div class="tophalf">
+			<!-- <div class="left">TEST</div> -->
+			<div class="menu">
+				<div class="name"><a href="index.html">Phil<br>Grenon</a></div>
+				<div class="menu-content">
+					<a href="games.html" data-href="games.html" class="menu-item">_games</a>
+					<a href="me.html" data-href="me.html" class="menu-item">_me</a>
+				</div>
+			</div>
+			<div id="barba-wrapper">
+				<div class="barba-container">
 				</div>
 			</div>
 		</div>
 </body>
 
 </html>
+
+<script>
+	$(function () {
+		$(".menu-item").click(function () {
+			$(".menu").animate({ margin: 0 });
+		});
+	});
+
+</script>
