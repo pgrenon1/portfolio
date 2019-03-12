@@ -9,39 +9,43 @@
 
 	<script src="assets/js/lib/p5.min.js"></script>
 	<script src="assets/js/lib/addons/p5.dom.js"></script>
-	<script src="assets/js/lib/barba.min.js"></script>
 	<script src="assets/js/bg.js"></script>
-	<script src="assets/js/app.js"></script> <!-- our new ajax script -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+	<!-- <script src="assets/js/lib/barba.js-1.0.0/dist/barba.min.js" type="text/javascript"></script> -->
 	<link rel="stylesheet" href="assets/css/style.css">
-	<script src="node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body>
 	<div id="background"></div>
 	<div class="foreground">
-		<div class="tophalf">
-			<!-- <div class="left">TEST</div> -->
-			<div class="menu">
-				<div class="name"><a href="index.html">Phil<br>Grenon</a></div>
-				<div class="menu-content">
-					<a href="games.html" data-href="games.html" class="menu-item">_games</a>
-					<a href="me.html" data-href="me.html" class="menu-item">_me</a>
-				</div>
+		<div class="menu">
+			<div class="name">
+				<a href="index.html">phil<br>grenon</a>
+				<div class="title">creative coder</div>
 			</div>
-			<div id="barba-wrapper">
-				<div class="barba-container">
+			<div class="menu-content">
+				<div class="menu-item">
+					<a href="games.html" data-href="games.html">_games</a>
+				</div>
+				<div class="menu-item">
+					<a href="me.html" data-href="me.html">_me</a>
+				</div>
+				<div class="menu-item">
+					<a href="contact.html" data-href="me.html">_contact</a>
 				</div>
 			</div>
 		</div>
+		<div id="barba-wrapper">
+			<div class="barba-container">
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
 
-<script>
-	$(function () {
-		$(".menu-item").click(function () {
-			$(".menu").animate({ margin: 0 });
-		});
+<!-- <script>
+	$('document').ready(function () {
+		Barba.Pjax.start();
 	});
-
-</script>
+</script> -->
