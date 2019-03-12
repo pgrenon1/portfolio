@@ -30,16 +30,21 @@ function setup() {
 }
 
 function draw() {
+  background(backgroundCol)
+
   if (moveUp && animationHeight > -200) {
     animationHeight -= 100
   } else if (!moveUp && animationHeight < 2000) {
     animationHeight += 100
   }
 
-  background(backgroundCol)
-  GetNewHeights(0.003)
+
+  heights = []
 
   for (let i = 0; i < columnCount; i++) {
+    noiseIndex += 0.003
+    heights.push(noise(i + noiseIndex) * animationHeight)
+
     var height = heights[i]
 
     AddLine(i, height)
