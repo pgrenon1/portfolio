@@ -12,28 +12,29 @@ function setup() {
   columnWidth = windowWidth / 50
   cnv = createCanvas(windowWidth, windowHeight)
   cnv.parent('background')
-
+  // frameRate(60)
   backgroundCol = color(10, 10, 10)
   columnCount = windowWidth / columnWidth
   for (let i = 0; i < columnCount; i++) {
     lines[i] = []
   }
 
-  // menuItems = selectAll('.menu-item')
-  // for (i in menuItems) {
-  //   menuItems[i].mousePressed(MoveUp)
-  // }
+  menuItems = selectAll('.menu-item')
+  for (i in menuItems) {
+    menuItems[i].mousePressed(MoveUp)
+  }
 
-  // nameButton = select('.name')
-  // nameButton.mousePressed(MoveDown)
+  nameButton = select('.name')
+  nameButton.mousePressed(MoveDown)
+  stroke(255, 255, 255, 30)
 }
 
 function draw() {
-  // if (moveUp && animationHeight > -200) {
-  //   animationHeight -= 15
-  // } else if (!moveUp && animationHeight < 2000) {
-  //   animationHeight += 15
-  // }
+  if (moveUp && animationHeight > -200) {
+    animationHeight -= 100
+  } else if (!moveUp && animationHeight < 2000) {
+    animationHeight += 100
+  }
 
   background(backgroundCol)
   GetNewHeights(0.003)
@@ -54,7 +55,6 @@ function draw() {
       } else {
         strokeWeight(3)
       }
-      stroke(255, 255, 255, 30)
       line(x1, y1, x2, y2)
     }
   }
