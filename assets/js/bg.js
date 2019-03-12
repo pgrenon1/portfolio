@@ -1,5 +1,4 @@
 var columnCount
-var heights = []
 var noiseIndex = 0
 var backgroundCol
 var lines = []
@@ -12,21 +11,22 @@ function setup() {
   columnWidth = windowWidth / 50
   cnv = createCanvas(windowWidth, windowHeight)
   cnv.parent('background')
-  // frameRate(60)
+
   backgroundCol = color(10, 10, 10)
   columnCount = windowWidth / columnWidth
   for (let i = 0; i < columnCount; i++) {
-    lines[i] = []
+    lines.push(new Line(columnWidth * i, 0, columnWidth))
   }
 
   menuItems = selectAll('.menu-item')
   for (i in menuItems) {
     menuItems[i].mousePressed(MoveUp)
   }
-
   nameButton = select('.name')
   nameButton.mousePressed(MoveDown)
+
   stroke(255, 255, 255, 30)
+
   textSize(15)
   fill(255)
 }
@@ -40,55 +40,18 @@ function draw() {
     animationHeight += 15
   }
 
-  heights = []
   noiseIndex += 0.003
-
-  for (let i = 0; i < columnCount; i++) {
-    heights.push(noise(i + noiseIndex) * animationHeight)
-
-    var height = heights[i]
-
-    AddLine(i, height)
-    RemoveLine(i, height)
-
-    for (let j = 0; j < lines[i].length; j++) {
-      var x1 = lines[i][j][0]
-      var y1 = lines[i][j][1] / 2
-      var x2 = lines[i][j][2]
-      var y2 = lines[i][j][3] / 2
-      if (abs(mouseX - i * windowWidth / 50) <= 100) {
-        strokeWeight(10)
-      } else {
-        strokeWeight(3)
-      }
-      line(x1, y1, x2, y2)
+  for (let i = 0; i < lines.length; i++) {
+    if (abs(mouseX - i * windowWidth / 50) <= 100) {
+      strokeWeight(10)
+    } else {
+      strokeWeight(3)
     }
+    lines[i].update(noise(i + noiseIndex) * animationHeight / 2)
+    lines[i].show()
   }
+
   text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
-}
-
-function AddLine(columnIndex, height) {
-  var newLine = [
-    (windowWidth / columnCount) * columnIndex,
-    height,
-    (windowWidth / columnCount) * columnIndex + windowWidth / columnCount,
-    height
-  ]
-  lines[columnIndex].push(newLine)
-}
-
-function RemoveLine(columnIndex) {
-  if (lines[columnIndex].length > 20) {
-    lines[columnIndex].shift()
-  }
-}
-
-function GetNewHeights(ni) {
-  heights = []
-  noiseIndex += ni
-  for (let i = 0; i < columnCount; i++) {
-    heights.push(noise(i + noiseIndex) * animationHeight)
-  }
 }
 
 function windowResized() {
