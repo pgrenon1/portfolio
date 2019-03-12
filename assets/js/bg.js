@@ -33,16 +33,15 @@ function draw() {
   background(backgroundCol)
 
   if (moveUp && animationHeight > -200) {
-    animationHeight -= 100
+    animationHeight -= 15
   } else if (!moveUp && animationHeight < 2000) {
-    animationHeight += 100
+    animationHeight += 15
   }
 
-
   heights = []
+  noiseIndex += 0.003
 
   for (let i = 0; i < columnCount; i++) {
-    noiseIndex += 0.003
     heights.push(noise(i + noiseIndex) * animationHeight)
 
     var height = heights[i]
@@ -63,9 +62,11 @@ function draw() {
       line(x1, y1, x2, y2)
     }
   }
-  textSize(15)
-  fill(255)
-  text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
+  if (keyIsDown(16)) {
+    textSize(15)
+    fill(255)
+    text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
+  }
 }
 
 function AddLine(columnIndex, height) {
