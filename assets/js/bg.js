@@ -40,7 +40,7 @@ function draw() {
   GetNewHeights(0.003)
 
   for (let i = 0; i < columnCount; i++) {
-    var height = GetHeight(i)
+    var height = heights[i]
 
     AddLine(i, height)
     RemoveLine(i, height)
@@ -61,10 +61,6 @@ function draw() {
   textSize(15)
   fill(255)
   text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
-}
-
-function GetHeight(i) {
-  return heights[i]
 }
 
 function AddLine(columnIndex, height) {
