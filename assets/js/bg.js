@@ -27,6 +27,8 @@ function setup() {
   nameButton = select('.name')
   nameButton.mousePressed(MoveDown)
   stroke(255, 255, 255, 30)
+  textSize(15)
+  fill(255)
 }
 
 function draw() {
@@ -62,11 +64,7 @@ function draw() {
       line(x1, y1, x2, y2)
     }
   }
-  if (keyIsDown(16)) {
-    textSize(15)
-    fill(255)
-    text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
-  }
+  text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
 }
 
 function AddLine(columnIndex, height) {
