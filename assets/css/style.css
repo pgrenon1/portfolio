@@ -1,6 +1,6 @@
 @font-face {
 	font-family: monofur;
-	src: url(../fonts/monof55.ttf)
+	src: url(../fonts/Arvo-Regular.ttf)
 }
 
 html{
@@ -11,12 +11,16 @@ body {
 	display: block;
 	margin: 0;
 	padding: 0;
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
 	overflow-x: hidden;
 	font-family: monofur;
 	font-size: 2rem;
 	color: rgb(148, 148, 148);	
 	height: 100%;
+	letter-spacing: 0rem
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 canvas {
@@ -54,16 +58,16 @@ a {
 }
 
 .name {
-	font-size: 6vw;
+	font-size: 5vw;
 	flex-basis: 30%
 }
 
 .title{
-	font-size: 3vw;
+	font-size: 2vw;
 }
 
 .menu-content {
-	font-size: 4vw;
+	font-size: 3vw;
 	flex-basis: 50%;
 	display: flex;
 	width:100%;
@@ -74,8 +78,53 @@ a {
 	margin: 0 auto
 }
 
+.subtitle{
+	font-size: 2em;
+	margin: 2rem 0;
+	font-weight: bold;
+
+}
+
 a:hover {
-	font-weight: bold
+	color: rgb(200,200,200)
+}
+
+.game{
+	display: flex;
+	margin: 1%;
+	border: 5px solid black;
+	border-radius: 10px;
+	background-color: rgb(20,20,20);
+}
+
+.game:hover {
+	background-color: rgb(30,30,30);
+}
+
+.game-title{
+	flex-basis: 25%;
+	text-align: center;
+	margin: auto;
+	font-style: italic
+}
+
+.game-image {
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: black;
+}
+
+.game-image img{
+	width: 100%;
+	height: auto;
+}
+
+.game-description{
+	flex-basis: 25%;
+	font-size: 1.5vw;
+	text-align: center
 }
 
 @media screen and (max-width: 400px) {

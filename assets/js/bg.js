@@ -18,11 +18,11 @@ function setup() {
     lines.push(new Line(columnWidth * i, 0, columnWidth))
   }
 
-  menuItems = selectAll('.menu-item')
+  menuItems = selectAll('.menu-item-text')
   for (i in menuItems) {
     menuItems[i].mousePressed(MoveUp)
   }
-  nameButton = select('.name')
+  nameButton = select('.name-text')
   nameButton.mousePressed(MoveDown)
 
   stroke(255, 255, 255, 30)
@@ -34,10 +34,10 @@ function setup() {
 function draw() {
   background(backgroundCol)
 
-  if (moveUp && animationHeight > -200) {
-    animationHeight -= 15
+  if (moveUp && animationHeight > -50) {
+    animationHeight -= 12
   } else if (!moveUp && animationHeight < 2000) {
-    animationHeight += 15
+    animationHeight += 12
   }
 
   noiseIndex += 0.003
@@ -51,7 +51,7 @@ function draw() {
     lines[i].show()
   }
 
-  text(Math.round(frameRate()), windowWidth - 20, windowHeight - 20)
+  text(Math.round(frameRate()), windowWidth - 30, windowHeight - 20)
 }
 
 function windowResized() {
