@@ -1,6 +1,6 @@
 @font-face {
 	font-family: monofur;
-	src: url(../fonts/Arvo-Regular.ttf)
+	src: url(../fonts/Sawasdee.ttf)
 }
 
 html{
@@ -58,16 +58,16 @@ a {
 }
 
 .name {
-	font-size: 5vw;
+	font-size: 6vw;
 	flex-basis: 30%
 }
 
 .title{
-	font-size: 2vw;
+	font-size: 3vw;
 }
 
 .menu-content {
-	font-size: 3vw;
+	font-size: 4vw;
 	flex-basis: 50%;
 	display: flex;
 	width:100%;
@@ -79,7 +79,7 @@ a {
 }
 
 .subtitle{
-	font-size: 2em;
+	font-size: 3em;
 	margin: 2rem 0;
 	font-weight: bold;
 
