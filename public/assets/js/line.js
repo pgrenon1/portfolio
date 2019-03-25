@@ -20,7 +20,7 @@ function Line(x, y, width) {
         for (let i = 0; i < this.history.length; i++) {
             var pos = this.history[i]
 
-            line(pos.x, pos.y, pos.x + width, pos.y + 0)
+            line(pos.x, pos.y, pos.x + width, pos.y)
         }
     }
 
