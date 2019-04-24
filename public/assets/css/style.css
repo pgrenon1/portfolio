@@ -1,6 +1,6 @@
 @font-face {
 	font-family: monofur;
-	src: url(../fonts/Sawasdee.ttf)
+	src: url(../fonts/monofur.ttf)
 }
 
 html{
@@ -8,6 +8,7 @@ html{
 }
 
 body {
+	background-color: rgb(10,10,10);
 	font-weight: bold;
 	display: block;
 	margin: 0;
@@ -36,19 +37,12 @@ a {
 	text-decoration: none;
 }
 
-#games{
-	background-color: rgb(10,10,10);
-}
-
-#me{
-	background-color: rgb(10,10,10);
-}
-
 .background {
 	position: fixed;
 }
 
 .foreground {
+	margin: 20px 20px;
 	z-index: 1;
 }
 
@@ -59,11 +53,13 @@ a {
 }
 
 .name {
+	line-height: 0.8;
 	font-size: 6vw;
 	flex-basis: 30%
 }
 
 .title{
+	line-height: 2;
 	font-size: 3vw;
 }
 
@@ -86,20 +82,19 @@ a {
 
 }
 
-a:hover {
-	color: rgb(200,200,200)
+.menu a:hover {
+	color: rgb(220,220,220)
 }
 
 .game{
 	display: flex;
-	margin: 1%;
-	border: 5px solid black;
-	border-radius: 10px;
-	background-color: rgb(20,20,20);
+	margin: 1% 0;
+	border: 5px solid rgb(5,5,5);
+	/* border-radius: 10px; */
 }
 
 .game:hover {
-	background-color: rgb(30,30,30);
+	background-color: rgb(20,20,20);
 }
 
 .game-title{
@@ -114,7 +109,20 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: black;
+	/* background-color: rgb(10,10,10); */
+}
+
+.mobile-game-image{
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.mobile-game-image img{
+	height: 100%;
+	width: 50%;
+	margin: auto;
 }
 
 .game-image img{
@@ -122,20 +130,56 @@ a:hover {
 	height: auto;
 }
 
-.game-description{
+.game-description-container{
 	flex-basis: 25%;
 	font-size: 1.5vw;
-	text-align: center
+	text-align: left;
+	display: flex;
+	align-items: center;
+	padding: 20px;
 }
+
+.game-description-container a{
+	text-decoration: underline;
+}
+
+.me-content{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5rem;
+}
+.me-content > *{
+	margin: 1rem;
+}
+
+.me-title{
+	/* text-align: left; */
+	font-size: 2rem;
+}
+.school{
+	font-size: 1.5rem;
+}
+
+
+/* .up-element{
+	align-self: flex-start;
+}
+.down-element{
+	align-self: flex-end;
+} */
 
 @media screen and (max-width: 400px) {
 	/* These rules apply to screens smaller than 400px (mobile) */
-	
 	.menu {
 		flex-basis: 100%;
 	}
 
 	.name {
 		font-size: 30px;
+	}
+
+	.game {
+		flex-direction: row;
 	}
 }

@@ -34,11 +34,11 @@ function setup() {
 function draw() {
   background(backgroundCol)
 
-  if (moveUp && animationHeight > -50) {
-    animationHeight -= 12
-  } else if (!moveUp && animationHeight < 2000) {
-    animationHeight += 12
-  }
+  // if (moveUp && animationHeight > -150) {
+  //   animationHeight -= 12
+  // } else if (!moveUp && animationHeight < 2000) {
+  //   animationHeight += 12
+  // }
 
   noiseIndex += 0.003
   for (let i = 0; i < lines.length; i++) {

@@ -10,72 +10,194 @@
 </head>
 
 <body id="games">
-	<div class="menu">
-		<div class="name">
-			<a href="index.html">phil<br>grenon</a>
-			<div class="title">creative coder</div>
-		</div>
-		<div class="menu-content">
-			<div class="menu-item">
-				<a href="games.html" data-href="games.html">_games</a>
-			</div>
-			<div class="menu-item">
-				<a href="me.html" data-href="me.html">_me</a>
-			</div>
-			<div class="menu-item">
-				<a href="contact.html" data-href="me.html">_contact</a>
-			</div>
-		</div>
-	</div>
-	<div id="barba-wrapper">
-		<div class="barba-container">
-			<div class="subtitle">
-				GAMES
-			</div>
-			<div class="content">
-				<div class="game">
-					<div class="game-title">New York Dragon</div>
-					<div class="game-image">
-						<img src="assets/img/newyorkdragon.png" alt="NewYorkDragon">
+	<div id="background"></div>
+	<div class="foreground">
+		<div id="barba-wrapper">
+			<div class="barba-container">
+				<div class="menu">
+					<div class="name">
+						<a href="index.html">phil<br>grenon</a>
+						<div class="title">creative coder</div>
 					</div>
-					<div class="game-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-						commodo consequat. Duis
-						aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div class="menu-content">
+						<div class="menu-item">
+							<a class="menu-item-text" id="games-menu-item" href="games.html"
+								style="color:rgb(220,220,220);">_games</a>
+						</div>
+						<div class="menu-item">
+							<a class="menu-item-text" id="me-menu-item" href="me.html">_me</a>
+						</div>
+						<div class="menu-item">
+							<a class="menu-item-text" id="contact-menu-item" href="contact.html">_contact</a>
+						</div>
 					</div>
 				</div>
-				<div class="game">
-					<div class="game-title">Goomba World</div>
-					<div class="game-image">
-						<img src="assets/img/goombaworld.png" alt="GoombaWorld">
+				<div class="content">
+					<div class="game">
+						<div class="game-title">Hover</div>
+						<div class="game-image">
+							<img src="assets/img/hover.png" alt="Hover">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>Hover</em> is a work-in-progress, experimental hardware game with an alternative
+								controller made with Arduino. In this one, the players must use communication and
+								cooperation to manipulate a aircraft that they need to land on a designated platform.
+								The ship has four thrusters that are controlled by four potentiometers.
+							</div>
+						</div>
 					</div>
-					<div class="game-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-						commodo consequat. Duis
-						aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div class="game">
+						<div class="game-title">Émile et Moi</div>
+						<div class="game-image">
+							<img src="assets/img/emileetmoi.png" alt="Émile et Moi">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<a href="www.emileetmoi.com"><em>Émile et Moi</em></a> is a platformer that uses
+								procedural grammar to write poems. The player jumps on platforms that contain a word,
+								and the thus chosen word is added to the poem that the player is creating. The words are
+								picked from a database of 200 francophone texts of classic Quebecois poets using Markov
+								chains.
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="game">
-					<div class="game-title">Bullet Command</div>
-					<div class="game-image">
-						<img src="assets/img/bulletcommand.png" alt="BulletCommand">
+					<div class="game">
+						<div class="game-title">The File Explorer</div>
+						<div class="game-image">
+							<img src="assets/img/thefileexplorer2.png" alt="The File Explorer">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>The File Explorer</em> is a text-based adventure game in the classical sense. In
+								this game, the player explores the domain of an old Victorian mansion through folders
+								and text-files. Interactivity comes in the form of batch files, some of which move
+								through the folders by themselves.
+							</div>
+						</div>
 					</div>
-					<div class="game-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-						commodo consequat. Duis
-						aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div class="game">
+						<div class="game-title">La Ligne Pointilée</div>
+						<div class="game-image">
+							<img src="assets/img/lalignepointillee.jpg" alt="La Ligne Pointillée">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>La Ligne Pointillée</em> is a rhythm game where the player controls a metro line
+								that grows when it reaches passenger. It was made for an open-air expo during the summer
+								of 2018 at the <a href="http://stationfmr.ca/en/">Station F-MR</a> by <a
+									href="https://mr63.ca/">Projet MR-63</a>. Set in the old decommissioned
+								Montreal metro train, it's nostalgic style and gameplay was designed with this peculiar
+								theme in mind. It's definetly not <em>Snake</em>.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">Mut8</div>
+						<div class="game-image">
+							<img src="assets/img/mut8.png" alt="Mut8">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>Mut8</em> is a work-in-progress, terminal-based classic roguelike with a twist: it
+								is made with an Entity Component System and it's architecture is thus highly compatible
+								with data-driven design techniques, and is characterized by a very flexible runtime in
+								terms of variability in function and behaviours.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">Rubik-Like</div>
+						<div class="game-image">
+							<img src="assets/img/rubiklike.png" alt="Rubik-Like">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>Rubik-Like</em> is a puzzlish roguelike played on a Rubik's cube. The player must
+								manipulate the cube in order to acquire treasure and defeat enemies.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">New York Dragon</div>
+						<div class="game-image">
+							<img src="assets/img/newyorkdragon.png" alt="New York Dragon">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>New York Dragon</em> is another experimental game mad with alternative hardware
+								controls made with Arduino. In this one, the player is a fire-breathing dragon, but the
+								controller is a breathalizer that measure ethanol. The more ethanol is in the breath of
+								the player, the more flame is produced.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">Out of the Woods</div>
+						<div class="mobile-game-image">
+							<img src="assets/img/outofthewoods.png" alt="Out of the Woods">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>Out of the Woods</em> is my first ever game. It's a survival and exploration game
+								for mobile with crafting and management elements. It is set on a procedurally generated
+								array of hexagonal tiles. The player, lost in a forest, must manage his hunger, thirst
+								and body temperature and explore the environment in order to get to safety.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">G**mba World</div>
+						<div class="game-image">
+							<img src="assets/img/goombaworld.png" alt="G**mba World">
+						</div>
+						<div class="game-description-container">
+							G**mba World is a mobile game that I made in a couple days as a joke to some friends. It's
+							about dodging stuff that falls down. It has online rankings and an achievement system.
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">Bullet Command</div>
+						<div class="game-image">
+							<img src="assets/img/bulletcommand.png" alt="Bullet Command">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>Bullet Command</em> A coop, reverse shoot ‘em up with a custom controller panel made
+								with Arduino. The panel is
+								made up of multiple hardware inputs, joysticks, switches, numpad, LCD monitors,
+								key-switches, etc.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">Lost Signals</div>
+						<div class="game-image">
+							<img src="assets/img/lostsignalcover.png" alt="Lost Signal">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em><a href="https://flopgames.itch.io/lost-signals">Lost Signal</a></em> is a
+								collection of mini-games and media, told through an old TV set and a floating record
+								player. It focuses on the transformation of signal when communicated;
+								how the medium alters its representation and how that
+								representation translates to another when transmitted anew.
+							</div>
+						</div>
+					</div>
+					<div class="game">
+						<div class="game-title">Everything Die</div>
+						<div class="game-image">
+							<img src="assets/img/everythingdieboth.png" alt="Everything Die">
+						</div>
+						<div class="game-description-container">
+							<div>
+								<em>Everything Die</em> is not at all as violent as it sounds. It's a grid-based puzzle
+								game where the player controls a cube that rotates when it moves around, and can acquire
+								one-use item that are held on the faces of the cube. You can only use an item if the
+								face that holds it is pointing up. I made a 2D version and a 3D demo.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -14,39 +14,34 @@
 	<script src="assets/js/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/js/lib/barba/dist/barba.min.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/preload.js"></script>
 </head>
 
 <body>
 	<div id="background"></div>
 	<div class="foreground">
-		<div class="menu">
-			<div class="name">
-				<a class="name-text" href="index.html">phil<br>grenon</a>
-				<div class="title">creative coder</div>
-			</div>
-			<div class="menu-content">
-				<div class="menu-item">
-					<a class="menu-item-text" href="games.html" data-href="games.html">_games</a>
-				</div>
-				<div class="menu-item">
-					<a class="menu-item-text" href="me.html" data-href="me.html">_me</a>
-				</div>
-				<div class="menu-item">
-					<a class="menu-item-text" href="contact.html" data-href="me.html">_contact</a>
-				</div>
-			</div>
-		</div>
 		<div id="barba-wrapper">
 			<div class="barba-container">
+				<div class="menu">
+					<div class="name">
+						<a class="name-text" href="index.html">phil<br>grenon</a>
+						<div class="title">creative coder</div>
+					</div>
+					<div class="menu-content">
+						<div class="menu-item">
+							<a class="menu-item-text" id="games-menu-item" href="games.html">_games</a>
+						</div>
+						<div class="menu-item">
+							<a class="menu-item-text" id="me-menu-item" href="me.html">_me</a>
+						</div>
+						<div class="menu-item">
+							<a class="menu-item-text" id="contact-menu-item" href="contact.html">_contact</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </body>
 
 </html>
-
-<script>
-	$('document').ready(function () {
-		Barba.Pjax.start();
-	});
-</script>
