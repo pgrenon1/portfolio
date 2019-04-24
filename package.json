@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/pgrenon1/portfolio/issues"
   },
-  "homepage": "https://github.com/pgrenon1/portfolio#readme",
+  "homepage": "https://github.com/pgrenon1/portfolio/public/index",
   "devDependencies": {
     "barba.js": "^1.0.0"
   },
