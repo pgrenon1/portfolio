@@ -18,13 +18,6 @@ function setup() {
     lines.push(new Line(columnWidth * i, 0, columnWidth))
   }
 
-  menuItems = selectAll('.menu-item-text')
-  for (i in menuItems) {
-    menuItems[i].mousePressed(MoveUp)
-  }
-  nameButton = select('.name-text')
-  nameButton.mousePressed(MoveDown)
-
   stroke(255, 255, 255, 30)
 
   textSize(15)
