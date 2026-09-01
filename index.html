@@ -1,47 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Phil Grenon</title>
-
-	<script src="assets/js/lib/p5/p5.min.js"></script>
-	<script src="assets/js/lib/p5/addons/p5.dom.js"></script>
-	<script src="assets/js/bg.js"></script>
-	<script src="assets/js/line.js"></script>
-	<script src="assets/js/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/lib/barba/dist/barba.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="assets/css/style.css">
-	<script src="assets/js/preload.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<div id="background"></div>
-	<div class="foreground">
-		<div id="barba-wrapper">
-			<div class="barba-container">
-				<div class="menu">
-					<div class="name">
-						<a class="name-text" href="index.html">phil<br>grenon</a>
-						<div class="title">creative coder</div>
-					</div>
-					<div class="menu-content">
-						<div class="menu-item">
-							<a class="menu-item-text" id="games-menu-item" href="games.html">_games</a>
-						</div>
-						<div class="menu-item">
-							<a class="menu-item-text" id="me-menu-item" href="me.html">_me</a>
-						</div>
-						<div class="menu-item">
-							<a class="menu-item-text" id="contact-menu-item" href="contact.html">_contact</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <iframe id="background" src="background.html"></iframe>
+    <div id="content">
+        <div id="title">
+            <a href="#home">phil_grenon</a>
+        </div>
+        <nav>
+            <a href="#games" data-section="games">.games</a>
+            <a href="#projects" data-section="projects">.projects</a>
+            <a href="#press" data-section="press">.press</a>
+            <a href="#cv" data-section="cv">.cv</a>
+            <a href="#contact" data-section="contact">.contact</a>
+        </nav>
+        <div id="dynamic-content" class="page-content">
+            <!-- Content will be loaded here -->
+        </div>
+    </div>
+    <div id="score">.score: 0</div>
+    <script src="main.js"></script>
 </body>
-
-</html>
+</html> 
