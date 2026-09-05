@@ -47,7 +47,6 @@ function preload() {
 class Drop {
   constructor() {
     this.reset();
-    this.brightness = 10; // Default brightness
   }
 
   reset() {

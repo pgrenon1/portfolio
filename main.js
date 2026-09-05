@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', async (e) => {
             e.preventDefault();
             const section = link.dataset.section;
+            // Intercept the CV link to open in a new tab
+            if (section === 'cv') {
+                window.open('https://pgrenon1.github.io/CV/resume.html', '_blank', 'noopener');
+                return;
+            }
             await loadContent(section);
             updateTitle(section);
         });
