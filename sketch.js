@@ -33,7 +33,7 @@ class Particle {
 const particles = [];
 
 let score = 0;
-let targetScore = 10000;
+let targetScore = 5000;
 let streetlight;
 let lightX; // Position of the light source
 let lightY; // Store light Y position globally
